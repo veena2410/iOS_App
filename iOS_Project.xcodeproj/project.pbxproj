@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0366A89B217B685500945DED /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366A89A217B685500945DED /* ToDoController.swift */; };
 		03D2D4652175CBC3000E91A5 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4642175CBC3000E91A5 /* FeedController.swift */; };
 		03D2D4672175CC26000E91A5 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4662175CC26000E91A5 /* JournalController.swift */; };
 		03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4682175CC38000E91A5 /* SettingsController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0366A89A217B685500945DED /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
 		03D2D4642175CBC3000E91A5 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		03D2D4662175CC26000E91A5 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		03D2D4682175CC38000E91A5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				03FC4D8E216F3436001D009F /* ViewController.swift */,
 				03D2D4642175CBC3000E91A5 /* FeedController.swift */,
 				03D2D46C2175CC79000E91A5 /* CameraController.swift */,
+				0366A89A217B685500945DED /* ToDoController.swift */,
 				03D2D4662175CC26000E91A5 /* JournalController.swift */,
 				03D2D4682175CC38000E91A5 /* SettingsController.swift */,
 				03D2D46A2175CC4D000E91A5 /* ProfileController.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03FC4D8F216F3436001D009F /* ViewController.swift in Sources */,
+				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
 				03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */,
 				03D2D46D2175CC79000E91A5 /* CameraController.swift in Sources */,
 				03D2D4672175CC26000E91A5 /* JournalController.swift in Sources */,
