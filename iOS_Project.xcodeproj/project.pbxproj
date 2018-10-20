@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0366A89B217B685500945DED /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366A89A217B685500945DED /* ToDoController.swift */; };
+		03ABE650217B73A900D93B56 /* BulletJournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ABE64F217B73A900D93B56 /* BulletJournalController.swift */; };
 		03D2D4652175CBC3000E91A5 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4642175CBC3000E91A5 /* FeedController.swift */; };
 		03D2D4672175CC26000E91A5 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4662175CC26000E91A5 /* JournalController.swift */; };
 		03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4682175CC38000E91A5 /* SettingsController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0366A89A217B685500945DED /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
+		03ABE64F217B73A900D93B56 /* BulletJournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletJournalController.swift; sourceTree = "<group>"; };
 		03D2D4642175CBC3000E91A5 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		03D2D4662175CC26000E91A5 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		03D2D4682175CC38000E91A5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				03D2D4682175CC38000E91A5 /* SettingsController.swift */,
 				03D2D46A2175CC4D000E91A5 /* ProfileController.swift */,
 				03FC4D90216F3436001D009F /* Main.storyboard */,
+				03ABE64F217B73A900D93B56 /* BulletJournalController.swift */,
 				03FC4D93216F3437001D009F /* Assets.xcassets */,
 				03FC4D95216F3437001D009F /* LaunchScreen.storyboard */,
 				03FC4D98216F3437001D009F /* Info.plist */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ABE650217B73A900D93B56 /* BulletJournalController.swift in Sources */,
 				03FC4D8F216F3436001D009F /* ViewController.swift in Sources */,
 				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
 				03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */,
