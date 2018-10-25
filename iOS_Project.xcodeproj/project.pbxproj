@@ -14,6 +14,7 @@
 		03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4682175CC38000E91A5 /* SettingsController.swift */; };
 		03D2D46B2175CC4D000E91A5 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D46A2175CC4D000E91A5 /* ProfileController.swift */; };
 		03D2D46D2175CC79000E91A5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D46C2175CC79000E91A5 /* CameraController.swift */; };
+		03E7149521819C9600F2DB21 /* ProfilePicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E7149421819C9600F2DB21 /* ProfilePicture.jpg */; };
 		03FC4D8D216F3436001D009F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4D8C216F3436001D009F /* AppDelegate.swift */; };
 		03FC4D8F216F3436001D009F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4D8E216F3436001D009F /* ViewController.swift */; };
 		03FC4D92216F3436001D009F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FC4D90216F3436001D009F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		03D2D4682175CC38000E91A5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		03D2D46A2175CC4D000E91A5 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		03D2D46C2175CC79000E91A5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		03E7149421819C9600F2DB21 /* ProfilePicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfilePicture.jpg; sourceTree = "<group>"; };
 		03FC4D89216F3436001D009F /* iOS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FC4D8C216F3436001D009F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03FC4D8E216F3436001D009F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				03FC4D93216F3437001D009F /* Assets.xcassets */,
 				03FC4D95216F3437001D009F /* LaunchScreen.storyboard */,
 				03FC4D98216F3437001D009F /* Info.plist */,
+				03E7149421819C9600F2DB21 /* ProfilePicture.jpg */,
 			);
 			path = iOS_Project;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				03FC4D97216F3437001D009F /* LaunchScreen.storyboard in Resources */,
 				03FC4D94216F3437001D009F /* Assets.xcassets in Resources */,
+				03E7149521819C9600F2DB21 /* ProfilePicture.jpg in Resources */,
 				03FC4D92216F3436001D009F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
