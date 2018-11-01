@@ -10,6 +10,14 @@ import UIKit
 
 class CameraController: UIViewController {
     
+//    let captureSession = AVCaptureSession()
+    var previewLayer: CALayer!
+//    var captureDevice: AVCaptureDevic!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
