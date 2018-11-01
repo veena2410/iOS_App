@@ -690,30 +690,12 @@
                     <view key="view" contentMode="scaleToFill" id="pcw-qG-0Eg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAMERA!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkS-gy-r6t">
-                                <rect key="frame" x="153" y="78" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tpl-yE-Rzv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="Res-8u-DXu"/>
-                    <toolbarItems>
-                        <barButtonItem systemItem="camera" id="EjY-Fm-Z88">
-                            <connections>
-                                <action selector="takePicture:" destination="3f3-LP-qu7" id="HjH-pB-NNF"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="cameraButton" destination="EjY-Fm-Z88" id="BcP-4K-H3t"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgn-40-8ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

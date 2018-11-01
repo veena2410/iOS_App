@@ -11,7 +11,7 @@ import UIKit
 class CameraController: UIViewController {
     
 //    let captureSession = AVCaptureSession()
-    var previewLayer: CALayer!
+//    var previewLayer: CALayer!
 //    var captureDevice: AVCaptureDevic!
     
     
