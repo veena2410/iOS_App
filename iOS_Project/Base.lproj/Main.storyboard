@@ -157,12 +157,39 @@
                     <view key="view" contentMode="scaleToFill" id="pcw-qG-0Eg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koo-Gh-iyF">
+                                <rect key="frame" x="0.0" y="54" width="375" height="292"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-e3-1Cz">
+                                <rect key="frame" x="149" y="372" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="3f3-LP-qu7" eventType="touchUpInside" id="E2f-KF-DVn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp5-7e-Xpy">
+                                <rect key="frame" x="143" y="418" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="3f3-LP-qu7" eventType="touchUpInside" id="eMv-Jf-YXw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tpl-yE-Rzv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="Res-8u-DXu"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="koo-Gh-iyF" id="3xI-Wv-odA"/>
+                        <outlet property="selectPhoto" destination="Wp5-7e-Xpy" id="tId-ej-sgT"/>
+                        <outlet property="takePhoto" destination="8iZ-e3-1Cz" id="qFd-xe-Ate"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgn-40-8ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
