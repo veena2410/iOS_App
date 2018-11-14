@@ -14,7 +14,7 @@ class CalendarMoodController : UIViewController  {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
-//    @IBOutlet weak var badDayBtn: UIButton!
+    //    @IBOutlet weak var badDayBtn: UIButton!
     
     
     let monthColor = UIColor.black
@@ -78,65 +78,36 @@ class CalendarMoodController : UIViewController  {
         guard let validCell = view as? CustomCell else { return }
         
         if cellState.isSelected {
-        if(validCell.blankDay==true) {
-            validCell.greenMarker.isHidden = false
-            validCell.redMarker.isHidden = true
-            validCell.goodDay = true
-            validCell.blankDay = false
-            validCell.badDay = false
-            
-        } else if  (validCell.goodDay == true) {
-            
-            validCell.greenMarker.isHidden = true
-            validCell.redMarker.isHidden = false
-            validCell.badDay = true
-            validCell.goodDay = false
-            validCell.blankDay = false
-            
-        } else if (validCell.badDay == true) {
-            validCell.greenMarker.isHidden = true
-            validCell.redMarker.isHidden = true
-            validCell.goodDay = false
-            validCell.badDay = false
-            validCell.blankDay = true
+            if(validCell.blankDay==true) {
+                validCell.greenMarker.isHidden = false
+                validCell.redMarker.isHidden = true
+                validCell.goodDay = true
+                validCell.blankDay = false
+                validCell.badDay = false
+                
+            } else if  (validCell.goodDay == true) {
+                
+                validCell.greenMarker.isHidden = true
+                validCell.redMarker.isHidden = false
+                validCell.badDay = true
+                validCell.goodDay = false
+                validCell.blankDay = false
+                
+            } else if (validCell.badDay == true) {
+                validCell.greenMarker.isHidden = true
+                validCell.redMarker.isHidden = true
+                validCell.goodDay = false
+                validCell.badDay = false
+                validCell.blankDay = true
             }
-    }
+        }
         
-//        if(goodDay==true){
-//
-//            if cellState.isSelected {
-//                if(validCell.isDateSelected==false){
-//                    validCell.greenMarker.isHidden = false
-//                    validCell.redMarker.isHidden = true
-//                    validCell.isDateSelected = true
-//                } else {
-//                    validCell.greenMarker.isHidden = true
-//                    validCell.isDateSelected = false
-//                }
-//            }
-//
-//        }
-//
-//
-//        if(goodDay==false){
-//
-//            if cellState.isSelected {
-//                if(validCell.isDateSelected==false){
-//                    validCell.greenMarker.isHidden = true
-//                    validCell.redMarker.isHidden = false
-//                    validCell.isDateSelected = true
-//                } else {
-//                    validCell.redMarker.isHidden = true
-//                    validCell.isDateSelected = false
-//                }
-//            }
-//
-//        }
+        
     }
     
     
-
-
+    
+    
     func setupViewFromCalendar(from visibleDates: DateSegmentInfo){
         calendarView.visibleDates(){(visibileDates) in
             let date = visibileDates.monthDates.first!.date
@@ -152,8 +123,8 @@ class CalendarMoodController : UIViewController  {
     }
     
 }
-    
-    
+
+
 extension CalendarMoodController: JTAppleCalendarViewDataSource {
     
     
@@ -196,8 +167,8 @@ extension CalendarMoodController: JTAppleCalendarViewDelegate {
             myCustomCell.greenMarker.isHidden = true
             myCustomCell.redMarker.isHidden = true
         }
-
-     
+        
+        
         
         return myCustomCell
     }

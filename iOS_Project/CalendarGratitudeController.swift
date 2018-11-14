@@ -20,11 +20,11 @@ class CalendarGratitudeController : UIViewController  {
     @IBOutlet weak var gratitudeTxtfield2: UITextField!
     @IBOutlet weak var gratitudeTxtfield3: UITextField!
     
-
     
-//    @IBOutlet weak var gratitudeTxtfield1: UITextField!
-//    @IBOutlet weak var gratitudeTxtfield2: UITextField!
-//    @IBOutlet weak var gratitudeTxtfield3: UITextField!
+    
+    //    @IBOutlet weak var gratitudeTxtfield1: UITextField!
+    //    @IBOutlet weak var gratitudeTxtfield2: UITextField!
+    //    @IBOutlet weak var gratitudeTxtfield3: UITextField!
     
     var currentCell : CustomCell!
     
@@ -47,7 +47,7 @@ class CalendarGratitudeController : UIViewController  {
         calendarView.scrollToDate(Date(), animateScroll: false)
         calendarView.selectDates([Date()])
         
-//        self.gratitudeTxtfield1.delegate = self
+        //        self.gratitudeTxtfield1.delegate = self
         
     }
     
@@ -65,26 +65,29 @@ class CalendarGratitudeController : UIViewController  {
     
     
     @IBAction func addGratitude(_ sender: UIButton) {
-                currentCell.gratitude1 = gratitudeTxtfield1.text!
-                currentCell.gratitude2 = gratitudeTxtfield2.text!
-                currentCell.gratitude3 = gratitudeTxtfield3.text!
+       
+
+        if((gratitudeTxtfield1!.text != "") && gratitudeTxtfield2!.text != "" && gratitudeTxtfield3!.text != ""){
+            currentCell.gratitude1 = gratitudeTxtfield1.text!
+            currentCell.gratitude2 = gratitudeTxtfield2.text!
+            currentCell.gratitude3 = gratitudeTxtfield3.text!
+            
+            gratitudeTxtfield1.resignFirstResponder()
+            gratitudeTxtfield2.resignFirstResponder()
+            gratitudeTxtfield3.resignFirstResponder()
+            currentCell.greenMarker.isHidden = false
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Error", message: "Please fill in the three fields", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            
+        }
         
-                gratitudeTxtfield1.resignFirstResponder()
-                gratitudeTxtfield2.resignFirstResponder()
-                gratitudeTxtfield3.resignFirstResponder()
-                currentCell.greenMarker.isHidden = false
     }
     
-//    @IBAction func addGratitude(_ sender: UIButton) {
-//        currentCell.gratitude1 = gratitudeTxtfield1.text!
-//        currentCell.gratitude2 = gratitudeTxtfield2.text!
-//        currentCell.gratitude3 = gratitudeTxtfield3.text!
-//
-//        gratitudeTxtfield1.resignFirstResponder()
-//        gratitudeTxtfield2.resignFirstResponder()
-//        gratitudeTxtfield3.resignFirstResponder()
-//        currentCell.greenMarker.isHidden = false
-//    }
+    
     
     
     func setGratitude (){
@@ -224,6 +227,6 @@ extension CalendarGratitudeController: JTAppleCalendarViewDelegate {
         setupViewFromCalendar(from: visibleDates)
         
     }
-
+    
 }
 
