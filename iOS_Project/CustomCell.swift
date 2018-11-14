@@ -13,13 +13,12 @@ class CustomCell: JTAppleCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var greenMarker: UIView!
-    
     @IBOutlet weak var redMarker: UIView!
+
+        var goodDay = false
+    var badDay = false
+    var blankDay = true
     
-  //  @IBOutlet weak var greenMarker: UIView!
-   // @IBOutlet weak var redMarker: UIView!
-    
-    var isDateSelected = false
     var gratitude1 = ""
     var gratitude2 = ""
     var gratitude3 = ""

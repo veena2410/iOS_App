@@ -518,14 +518,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKr-9X-j02">
-                                <rect key="frame" x="16" y="547" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bad Day?"/>
-                                <connections>
-                                    <action selector="badDay:" destination="Id5-OF-4vK" eventType="touchUpInside" id="0eM-5V-e6b"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -539,7 +531,6 @@
                         <viewLayoutGuide key="safeArea" id="tBE-Hg-H43"/>
                     </view>
                     <connections>
-                        <outlet property="badDayBtn" destination="bKr-9X-j02" id="VIb-CN-Nsz"/>
                         <outlet property="calendarView" destination="1zR-c3-Msb" id="d8u-yD-POz"/>
                         <outlet property="month" destination="ZuC-Vv-D9E" id="mlm-9e-AWN"/>
                         <outlet property="year" destination="1ky-wc-lUK" id="ri3-Qh-j7e"/>

@@ -17,10 +17,6 @@ class CalendarMoodController : UIViewController  {
 //    @IBOutlet weak var badDayBtn: UIButton!
     
     
-    @IBOutlet weak var badDayBtn: UIButton!
-    
-    var goodDay = true
-
     let monthColor = UIColor.black
     let selectedMonthColor = UIColor.blue
     let outSideMonthColor = UIColor.gray
@@ -79,61 +75,68 @@ class CalendarMoodController : UIViewController  {
     
     
     func handleCellSelected(view: JTAppleCell?, cellState: CellState){
-        
-        
         guard let validCell = view as? CustomCell else { return }
-        if(goodDay==true){
+        
+        if cellState.isSelected {
+        if(validCell.blankDay==true) {
+            validCell.greenMarker.isHidden = false
+            validCell.redMarker.isHidden = true
+            validCell.goodDay = true
+            validCell.blankDay = false
+            validCell.badDay = false
             
-            if cellState.isSelected {
-                if(validCell.isDateSelected==false){
-                    validCell.greenMarker.isHidden = false
-                    validCell.redMarker.isHidden = true
-                    validCell.isDateSelected = true
-                } else {
-                    validCell.greenMarker.isHidden = true
-                    validCell.isDateSelected = false
-                }
+        } else if  (validCell.goodDay == true) {
+            
+            validCell.greenMarker.isHidden = true
+            validCell.redMarker.isHidden = false
+            validCell.badDay = true
+            validCell.goodDay = false
+            validCell.blankDay = false
+            
+        } else if (validCell.badDay == true) {
+            validCell.greenMarker.isHidden = true
+            validCell.redMarker.isHidden = true
+            validCell.goodDay = false
+            validCell.badDay = false
+            validCell.blankDay = true
             }
-            
-        }
-        
-        
-        if(goodDay==false){
-            
-            if cellState.isSelected {
-                if(validCell.isDateSelected==false){
-                    validCell.greenMarker.isHidden = true
-                    validCell.redMarker.isHidden = false
-                    validCell.isDateSelected = true
-                } else {
-                    validCell.redMarker.isHidden = true
-                    validCell.isDateSelected = false
-                }
-            }
-            
-        }
     }
-    
-    
-    @IBAction func badDay(_ sender: UIButton) {
-                badDayBtn.isSelected = !badDayBtn.isSelected
-                goodDay = false
         
-                if(!badDayBtn.isSelected){
-                    goodDay = true
-                }
-    }
-    
-    
-//    @IBAction func badDay(_ sender: UIButton) {
-//        badDayBtn.isSelected = !badDayBtn.isSelected
-//        goodDay = false
+//        if(goodDay==true){
 //
-//        if(!badDayBtn.isSelected){
-//            goodDay = true
+//            if cellState.isSelected {
+//                if(validCell.isDateSelected==false){
+//                    validCell.greenMarker.isHidden = false
+//                    validCell.redMarker.isHidden = true
+//                    validCell.isDateSelected = true
+//                } else {
+//                    validCell.greenMarker.isHidden = true
+//                    validCell.isDateSelected = false
+//                }
+//            }
+//
 //        }
-//    }
+//
+//
+//        if(goodDay==false){
+//
+//            if cellState.isSelected {
+//                if(validCell.isDateSelected==false){
+//                    validCell.greenMarker.isHidden = true
+//                    validCell.redMarker.isHidden = false
+//                    validCell.isDateSelected = true
+//                } else {
+//                    validCell.redMarker.isHidden = true
+//                    validCell.isDateSelected = false
+//                }
+//            }
+//
+//        }
+    }
     
+    
+
+
     func setupViewFromCalendar(from visibleDates: DateSegmentInfo){
         calendarView.visibleDates(){(visibileDates) in
             let date = visibileDates.monthDates.first!.date
