@@ -20,6 +20,7 @@
 		03D2D46D2175CC79000E91A5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D46C2175CC79000E91A5 /* CameraController.swift */; };
 		03E7149521819C9600F2DB21 /* ProfilePicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E7149421819C9600F2DB21 /* ProfilePicture.jpg */; };
 		03E714B92181D74100F2DB21 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E714B82181D74100F2DB21 /* PhotoViewController.swift */; };
+		03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03F7DF9C219D6878007568EF /* Model.xcdatamodeld */; };
 		03FB7664219CB7FE00E2F20D /* journal_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03FB7663219CB7FE00E2F20D /* journal_bg.jpg */; };
 		03FC4D8D216F3436001D009F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4D8C216F3436001D009F /* AppDelegate.swift */; };
 		03FC4D8F216F3436001D009F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4D8E216F3436001D009F /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		03D2D46C2175CC79000E91A5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		03E7149421819C9600F2DB21 /* ProfilePicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfilePicture.jpg; sourceTree = "<group>"; };
 		03E714B82181D74100F2DB21 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		03F7DF9D219D6878007568EF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		03FB7663219CB7FE00E2F20D /* journal_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = journal_bg.jpg; sourceTree = "<group>"; };
 		03FC4D89216F3436001D009F /* iOS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FC4D8C216F3436001D009F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				03D2D4642175CBC3000E91A5 /* FeedController.swift */,
 				03D2D46C2175CC79000E91A5 /* CameraController.swift */,
 				0366A89A217B685500945DED /* ToDoController.swift */,
+				03F7DF9C219D6878007568EF /* Model.xcdatamodeld */,
 				03D2D4662175CC26000E91A5 /* JournalController.swift */,
 				03D2D4682175CC38000E91A5 /* SettingsController.swift */,
 				03D2D46A2175CC4D000E91A5 /* ProfileController.swift */,
@@ -252,6 +255,7 @@
 				03ABE650217B73A900D93B56 /* BulletJournalController.swift in Sources */,
 				03FC4D8F216F3436001D009F /* ViewController.swift in Sources */,
 				03A69E6D219A5A7A0045DF6A /* CustomCell.swift in Sources */,
+				03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */,
 				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
 				03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */,
 				034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */,
@@ -467,6 +471,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03F7DF9C219D6878007568EF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03F7DF9D219D6878007568EF /* Model.xcdatamodel */,
+			);
+			currentVersion = 03F7DF9D219D6878007568EF /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03FC4D81216F3436001D009F /* Project object */;
 }
