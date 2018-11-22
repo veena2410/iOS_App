@@ -10,6 +10,7 @@ import UIKit
 
 class CameraController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
     var imagePickerController : UIImagePickerController! {
         didSet{
             imagePickerController = UIImagePickerController()
@@ -53,8 +54,6 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
-        //picker.presentedViewController?.dismiss(animated: true, completion: nil)
-        
         picker.dismiss(animated: true, completion: nil)
     }
     
@@ -62,13 +61,12 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        //presented view when remove the "presentedViewController?".
-        //picker.presentedViewController?.dismiss(animated: true, completion: nil)
-        
-        
         if let image = (info[UIImagePickerController.InfoKey.editedImage] ?? info[UIImagePickerController.InfoKey.originalImage]) as? UIImage {
             
-            self.imageView.image = image
+            coreData().saveImage(image: image)
+            coreData().loadImage(view: self.imageView)
+            
+            //self.imageView.image = image
             
             
         }
