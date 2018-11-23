@@ -15,6 +15,7 @@
 		032A87D621A6B50200F482FF /* feed2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032A87CF21A6B50100F482FF /* feed2.jpg */; };
 		032A87D721A6B50200F482FF /* feed1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032A87D021A6B50200F482FF /* feed1.jpg */; };
 		032A87D821A6B50200F482FF /* feed5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032A87D121A6B50200F482FF /* feed5.jpg */; };
+		032A87DA21A6B67F00F482FF /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A87D921A6B67F00F482FF /* CustomCalendar.swift */; };
 		034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D19B2219AE7BC0073AE09 /* CalendarGratitudeController.swift */; };
 		0366A89B217B685500945DED /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366A89A217B685500945DED /* ToDoController.swift */; };
 		03A69E6D219A5A7A0045DF6A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A69E6C219A5A7A0045DF6A /* CustomCell.swift */; };
@@ -45,6 +46,7 @@
 		032A87CF21A6B50100F482FF /* feed2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feed2.jpg; sourceTree = "<group>"; };
 		032A87D021A6B50200F482FF /* feed1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feed1.jpg; sourceTree = "<group>"; };
 		032A87D121A6B50200F482FF /* feed5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feed5.jpg; sourceTree = "<group>"; };
+		032A87D921A6B67F00F482FF /* CustomCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendar.swift; sourceTree = "<group>"; };
 		034D19B2219AE7BC0073AE09 /* CalendarGratitudeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGratitudeController.swift; sourceTree = "<group>"; };
 		0366A89A217B685500945DED /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
 		03A69E6C219A5A7A0045DF6A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				032A87CE21A6B50100F482FF /* feed6.jpg */,
 				032A87CD21A6B50100F482FF /* feed7.jpg */,
 				03A69E6C219A5A7A0045DF6A /* CustomCell.swift */,
+				032A87D921A6B67F00F482FF /* CustomCalendar.swift */,
 				6C376A3721A5E53C009D111A /* coreData.swift */,
 			);
 			path = iOS_Project;
@@ -287,6 +290,7 @@
 				03FC4D8F216F3436001D009F /* ViewController.swift in Sources */,
 				03A69E6D219A5A7A0045DF6A /* CustomCell.swift in Sources */,
 				03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */,
+				032A87DA21A6B67F00F482FF /* CustomCalendar.swift in Sources */,
 				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
 				03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */,
 				034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */,
