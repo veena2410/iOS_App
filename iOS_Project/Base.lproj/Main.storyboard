@@ -159,29 +159,29 @@
             </objects>
             <point key="canvasLocation" x="2799.1999999999998" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Portfolio Controller-->
         <scene sceneID="sJT-cX-eGS">
             <objects>
-                <viewController id="TEI-ni-leF" sceneMemberID="viewController">
+                <viewController id="TEI-ni-leF" customClass="PortfolioController" customModule="iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fkt-M1-UJH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Portfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwH-Oo-ITa">
-                                <rect key="frame" x="155" y="108" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9t7-Iz-Oft">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MwH-Sz-JTW"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollViewImage" destination="9t7-Iz-Oft" id="Q3f-Q7-weH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqE-3O-ESx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="137"/>
+            <point key="canvasLocation" x="3533.5999999999999" y="136.28185907046478"/>
         </scene>
         <!--Camera-->
         <scene sceneID="4vn-hX-24g">

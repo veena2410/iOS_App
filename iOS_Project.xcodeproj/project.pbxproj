@@ -35,6 +35,7 @@
 		03FC4D94216F3437001D009F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FC4D93216F3437001D009F /* Assets.xcassets */; };
 		03FC4D97216F3437001D009F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FC4D95216F3437001D009F /* LaunchScreen.storyboard */; };
 		6C376A3821A5E53C009D111A /* coreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C376A3721A5E53C009D111A /* coreData.swift */; };
+		6C7B4A0721AC5B7E00FBC916 /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B4A0621AC5B7E00FBC916 /* PortfolioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		03FC4D96216F3437001D009F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03FC4D98216F3437001D009F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C376A3721A5E53C009D111A /* coreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreData.swift; sourceTree = "<group>"; };
+		6C7B4A0621AC5B7E00FBC916 /* PortfolioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
 		C142489D5B03F4C104D56935 /* Pods-iOS_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Project/Pods-iOS_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CA519B9A5791FD7C7A25E548 /* Pods-iOS_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Project/Pods-iOS_Project.release.xcconfig"; sourceTree = "<group>"; };
 		E24F6E92E5F02D90A95641C0 /* Pods_iOS_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				03A69E6C219A5A7A0045DF6A /* CustomCell.swift */,
 				032A87D921A6B67F00F482FF /* CustomCalendar.swift */,
 				6C376A3721A5E53C009D111A /* coreData.swift */,
+				6C7B4A0621AC5B7E00FBC916 /* PortfolioController.swift */,
 			);
 			path = iOS_Project;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */,
 				032A87DA21A6B67F00F482FF /* CustomCalendar.swift in Sources */,
 				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
+				6C7B4A0721AC5B7E00FBC916 /* PortfolioController.swift in Sources */,
 				03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */,
 				034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */,
 				03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */,

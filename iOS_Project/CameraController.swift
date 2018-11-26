@@ -20,18 +20,21 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var imageView: UIImageView!
     
     
+    //The method checks if the camera is avaiable else the function is disable
     @IBOutlet weak var takePhoto: UIButton!{
         didSet{
             takePhoto.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         }
     }
     
+    //The method checks if the photolibrary is avaiable else the function is disable
     @IBOutlet weak var selectPhoto: UIButton!{
         didSet{
             selectPhoto.isEnabled = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
         }
     }
     
+    //The method displays the camera when the user wants to take a picture
     @IBAction func takePhoto(_ sender: UIButton) {
         imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -39,37 +42,46 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
 
         imagePickerController.allowsEditing = true
         
+        //presents the camera
         present(imagePickerController, animated: true ,completion: nil)
     }
     
+    //The method displays the photolibrary when the user wants to select a photo from it
     @IBAction func selectPhoto(_ sender: UIButton) {
         
         imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.allowsEditing = true
         imagePickerController.delegate = self
+        
+        //presents the photolibrary
         present(imagePickerController, animated: true, completion: nil)
     }
     
     
+    //Method is triggered when the user cancels the camera or photolibrary
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
+        //dismiss the camera or the library
         picker.dismiss(animated: true, completion: nil)
     }
     
     
-    
+    //Method is triggered when the user has picked an image they want to use
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        //gets the picked image and sets it as an UIImage
         if let image = (info[UIImagePickerController.InfoKey.editedImage] ?? info[UIImagePickerController.InfoKey.originalImage]) as? UIImage {
             
+            //sets the picked image to the imageView (displays the image picked)
+            self.imageView.image = image
+            
+            //saves the picked image to the persistence layer
             coreData().saveImage(image: image)
-            self.viewDidLoad()
-            
-            
-            
+   
         }
         
+        //dismiss the camera or the library after an image has been picked
         picker.dismiss(animated: true, completion: nil)
     }
 
@@ -77,7 +89,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        coreData().loadImage(view: self.imageView)
+        
     }
     
     

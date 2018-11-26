@@ -38,6 +38,7 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == UITableViewCell.EditingStyle.delete
         {
             
+            //deletes the selected tasks form the todolist and the core data
             if let deleteValue = todos[indexPath.row] as? String {
                 coreData().deleteToDo(name: deleteValue, entityName: self.entityName)
                 todos.remove(at: indexPath.row)
@@ -51,14 +52,19 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func addItemButton(_ sender: Any) {
         if(input.text != "")
         {
+            //saves the added todo/ task to the core data
             coreData().SaveToDo(name: input.text!, entityName: self.entityName)
+            
+            //runs the viewDidLoad method to refresh the todolist with the added task
             self.viewDidLoad()
+            
             input.text = ""
             input.resignFirstResponder()
             myTableView.reloadData()
         }
     }
     
+    //The method adds the value of an array to an existing array
     func addToList(array: [String]) -> Void{
         if array.count > 0 {
             for todo in array {
@@ -72,9 +78,9 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //adds image array from the core data to the todolist
         self.addToList(array: coreData().loadToDo(entityName: self.entityName))
-        
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
 }
