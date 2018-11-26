@@ -12,9 +12,11 @@ class BulletJournalController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var myTableView: UITableView!
+    
+    let entityName = "BucketList"
 
     
-    var list = ["Your goal", "Your goal2"]
+    var list: [String] = []
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +35,13 @@ class BulletJournalController: UIViewController, UITableViewDelegate, UITableVie
     {
         if editingStyle == UITableViewCell.EditingStyle.delete
         {
-            list.remove(at: indexPath.row)
+            
+            if let deleteValue = list[indexPath.row] as? String {
+                coreData().deleteToDo(name: deleteValue, entityName: self.entityName)
+                list.remove(at: indexPath.row)
+                self.viewDidLoad()
+            }
+            
             myTableView.reloadData()
         }
     }
@@ -41,15 +49,28 @@ class BulletJournalController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func addItemButton(_ sender: Any) {
         if(input.text != "")
         {
-            list.append(input.text!)
+            
+            coreData().SaveToDo(name: input.text!, entityName: self.entityName)
+            self.viewDidLoad()
             input.text = ""
             input.resignFirstResponder()
             myTableView.reloadData()
         }
     }
+    
+    func addToList(array: [String]) -> Void{
+        if array.count > 0 {
+            for bucket in array {
+                if !list.contains(bucket) {
+                    list.append(bucket)
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addToList(array: coreData().loadToDo(entityName: self.entityName))
         // Do any additional setup after loading the view, typically from a nib.
     }
     

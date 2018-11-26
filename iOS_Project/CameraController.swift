@@ -36,7 +36,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .camera
-        //picker.mediaTypes = [kUTTypeImage as String]
+
         imagePickerController.allowsEditing = true
         
         present(imagePickerController, animated: true ,completion: nil)
@@ -64,9 +64,8 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         if let image = (info[UIImagePickerController.InfoKey.editedImage] ?? info[UIImagePickerController.InfoKey.originalImage]) as? UIImage {
             
             coreData().saveImage(image: image)
-            coreData().loadImage(view: self.imageView)
+            self.viewDidLoad()
             
-            //self.imageView.image = image
             
             
         }
@@ -77,7 +76,8 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        coreData().loadImage(view: self.imageView)
     }
     
     

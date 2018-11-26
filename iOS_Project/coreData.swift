@@ -20,6 +20,11 @@ class coreData {
         self.context = appDelegate!.persistentContainer.viewContext
     }
     
+    func getContext() -> NSManagedObjectContext {
+    
+        return self.context
+    }
+    
     
     func saveImage(image: UIImage) {
         
@@ -35,15 +40,6 @@ class coreData {
         entityObj.setValue(date, forKey: "id")
         
         
-        //let concurrency = NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType
-        
-        //let moc = NSManagedObjectContext(concurrencyType: concurrency)
-        
-       // let photo = NSEntityDescription.insertNewObject(forEntityName: "Photo", into: moc) as? Photo
-        
-         //   photo?.image = imageData
-         //   photo?.id = date
-        
         
         do{
             try self.context.save()
@@ -53,15 +49,10 @@ class coreData {
         
         }
         
-       // moc.refreshAllObjects()
-        
     }
     
     func loadImage(view: UIImageView) -> Void {
         
-       // let concurrency = NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType
-        
-      //  let moc = NSManagedObjectContext(concurrencyType: concurrency)
         
         let fetchImage = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
         
@@ -90,4 +81,80 @@ class coreData {
         
         
     }
+    
+   
+    func SaveToDo(name: String, entityName: String) {
+        
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: coreData().context)!
+        
+        let todo = NSManagedObject(entity: entity, insertInto: self.context)
+        
+        todo.setValue(name, forKey: "name")
+        
+        do{
+            try self.context.save()
+            
+        }catch let error as NSError {
+            print("could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    func loadToDo(entityName: String) -> [String] {
+        
+        var list: [String] = []
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        
+        do{
+            
+            let results = try self.context.fetch(fetchRequest)
+            
+            if(results.count > 0) {
+                for result in results as [NSManagedObject] {
+                
+                    if let todo = result.value(forKey: "name") as? String {
+                    
+                        list.append(todo)
+                    }
+                }
+            }
+            
+        }catch let error as NSError {
+            print("could not save. \(error), \(error.userInfo)")
+        }
+        
+        return list
+    }
+    
+    func deleteToDo(name: String, entityName: String) {
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        
+        do{
+            let results = try self.context.fetch(fetchRequest)
+            
+            if(results.count > 0) {
+                for result in results as [NSManagedObject] {
+                    
+                    let todo = result.value(forKey: "name") as? String
+                    
+                    if todo==name {
+                        
+                        self.context.delete(result)
+                    }
+                }
+            }
+            
+            try self.context.save()
+            
+        }catch let error as NSError {
+            print("could not save. \(error), \(error.userInfo)")
+        }
+    
+    }
+    
+    
+    
+
 }

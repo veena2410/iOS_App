@@ -7,32 +7,43 @@
 //
 
 import UIKit
+import CoreData
+import Foundation
 
 class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var myTableView: UITableView!
     
-    var list = ["Workout", "Cleaning"]
+    let entityName = "Todos"
+    
+    var todos: [String] = []
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (list.count)
+        return (todos.count)
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = list[indexPath.row]
         
-        return (cell)
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        cell.textLabel?.text = todos[indexPath.row]
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCell.EditingStyle.delete
         {
-            list.remove(at: indexPath.row)
+            
+            if let deleteValue = todos[indexPath.row] as? String {
+                coreData().deleteToDo(name: deleteValue, entityName: self.entityName)
+                todos.remove(at: indexPath.row)
+                self.viewDidLoad()
+            }
+  
             myTableView.reloadData()
         }
     }
@@ -40,17 +51,30 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func addItemButton(_ sender: Any) {
         if(input.text != "")
         {
-            list.append(input.text!)
+            coreData().SaveToDo(name: input.text!, entityName: self.entityName)
+            self.viewDidLoad()
             input.text = ""
             input.resignFirstResponder()
             myTableView.reloadData()
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func addToList(array: [String]) -> Void{
+        if array.count > 0 {
+            for todo in array {
+                if !todos.contains(todo) {
+                    todos.append(todo)
+                }
+            }
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.addToList(array: coreData().loadToDo(entityName: self.entityName))
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
     
 }
