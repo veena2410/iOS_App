@@ -20,6 +20,13 @@
 		0366A89B217B685500945DED /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366A89A217B685500945DED /* ToDoController.swift */; };
 		03A69E6D219A5A7A0045DF6A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A69E6C219A5A7A0045DF6A /* CustomCell.swift */; };
 		03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A69E6E219A5A990045DF6A /* CalendarMoodController.swift */; };
+		03AA8BF921ADAE8D00590F4A /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA8BF821ADAE8D00590F4A /* HabitController.swift */; };
+		03AA8BFB21ADAEB800590F4A /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA8BFA21ADAEB800590F4A /* Habit.swift */; };
+		03AA8BFF21ADAF2B00590F4A /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA8BFE21ADAF2B00590F4A /* myCell.swift */; };
+		03AA8C0121ADAFA800590F4A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA8C0021ADAFA800590F4A /* TableViewCell.swift */; };
+		03AA8C0321ADB1AE00590F4A /* CheckBoxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA8C0221ADB1AE00590F4A /* CheckBoxController.swift */; };
+		03AA8C0621ADB4AF00590F4A /* checkBoxFILLED @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AA8C0421ADB4AF00590F4A /* checkBoxFILLED @2x.png */; };
+		03AA8C0721ADB4B000590F4A /* checkBoxOUTLINE @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AA8C0521ADB4AF00590F4A /* checkBoxOUTLINE @2x.png */; };
 		03ABE650217B73A900D93B56 /* BulletJournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ABE64F217B73A900D93B56 /* BulletJournalController.swift */; };
 		03D2D4652175CBC3000E91A5 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4642175CBC3000E91A5 /* FeedController.swift */; };
 		03D2D4672175CC26000E91A5 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4662175CC26000E91A5 /* JournalController.swift */; };
@@ -51,6 +58,13 @@
 		0366A89A217B685500945DED /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
 		03A69E6C219A5A7A0045DF6A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03A69E6E219A5A990045DF6A /* CalendarMoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMoodController.swift; sourceTree = "<group>"; };
+		03AA8BF821ADAE8D00590F4A /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
+		03AA8BFA21ADAEB800590F4A /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		03AA8BFE21ADAF2B00590F4A /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
+		03AA8C0021ADAFA800590F4A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		03AA8C0221ADB1AE00590F4A /* CheckBoxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxController.swift; sourceTree = "<group>"; };
+		03AA8C0421ADB4AF00590F4A /* checkBoxFILLED @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxFILLED @2x.png"; sourceTree = "<group>"; };
+		03AA8C0521ADB4AF00590F4A /* checkBoxOUTLINE @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxOUTLINE @2x.png"; sourceTree = "<group>"; };
 		03ABE64F217B73A900D93B56 /* BulletJournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletJournalController.swift; sourceTree = "<group>"; };
 		03D2D4642175CBC3000E91A5 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		03D2D4662175CC26000E91A5 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
@@ -111,18 +125,25 @@
 				03FC4D8E216F3436001D009F /* ViewController.swift */,
 				03D2D4642175CBC3000E91A5 /* FeedController.swift */,
 				03D2D46C2175CC79000E91A5 /* CameraController.swift */,
+				03AA8BF821ADAE8D00590F4A /* HabitController.swift */,
+				03AA8BFE21ADAF2B00590F4A /* myCell.swift */,
+				03AA8C0021ADAFA800590F4A /* TableViewCell.swift */,
+				03AA8BFA21ADAEB800590F4A /* Habit.swift */,
 				0366A89A217B685500945DED /* ToDoController.swift */,
 				03F7DF9C219D6878007568EF /* Model.xcdatamodeld */,
 				03D2D4662175CC26000E91A5 /* JournalController.swift */,
 				03D2D4682175CC38000E91A5 /* SettingsController.swift */,
 				03D2D46A2175CC4D000E91A5 /* ProfileController.swift */,
 				03FC4D90216F3436001D009F /* Main.storyboard */,
+				03AA8C0221ADB1AE00590F4A /* CheckBoxController.swift */,
 				03ABE64F217B73A900D93B56 /* BulletJournalController.swift */,
 				03A69E6E219A5A990045DF6A /* CalendarMoodController.swift */,
 				034D19B2219AE7BC0073AE09 /* CalendarGratitudeController.swift */,
 				03FC4D93216F3437001D009F /* Assets.xcassets */,
 				03FC4D95216F3437001D009F /* LaunchScreen.storyboard */,
 				03FC4D98216F3437001D009F /* Info.plist */,
+				03AA8C0421ADB4AF00590F4A /* checkBoxFILLED @2x.png */,
+				03AA8C0521ADB4AF00590F4A /* checkBoxOUTLINE @2x.png */,
 				03FB7663219CB7FE00E2F20D /* journal_bg.jpg */,
 				03E7149421819C9600F2DB21 /* ProfilePicture.jpg */,
 				032A87D021A6B50200F482FF /* feed1.jpg */,
@@ -226,9 +247,11 @@
 				032A87D621A6B50200F482FF /* feed2.jpg in Resources */,
 				032A87D721A6B50200F482FF /* feed1.jpg in Resources */,
 				03E7149521819C9600F2DB21 /* ProfilePicture.jpg in Resources */,
+				03AA8C0721ADB4B000590F4A /* checkBoxOUTLINE @2x.png in Resources */,
 				032A87D821A6B50200F482FF /* feed5.jpg in Resources */,
 				03FC4D92216F3436001D009F /* Main.storyboard in Resources */,
 				03FB7664219CB7FE00E2F20D /* journal_bg.jpg in Resources */,
+				03AA8C0621ADB4AF00590F4A /* checkBoxFILLED @2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +314,10 @@
 				03A69E6D219A5A7A0045DF6A /* CustomCell.swift in Sources */,
 				03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */,
 				032A87DA21A6B67F00F482FF /* CustomCalendar.swift in Sources */,
+				03AA8C0121ADAFA800590F4A /* TableViewCell.swift in Sources */,
 				0366A89B217B685500945DED /* ToDoController.swift in Sources */,
+				03AA8BFB21ADAEB800590F4A /* Habit.swift in Sources */,
+				03AA8C0321ADB1AE00590F4A /* CheckBoxController.swift in Sources */,
 				6C7B4A0721AC5B7E00FBC916 /* PortfolioController.swift in Sources */,
 				03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */,
 				034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */,
@@ -302,6 +328,8 @@
 				03D2D4652175CBC3000E91A5 /* FeedController.swift in Sources */,
 				03FC4D8D216F3436001D009F /* AppDelegate.swift in Sources */,
 				03D2D46B2175CC4D000E91A5 /* ProfileController.swift in Sources */,
+				03AA8BFF21ADAF2B00590F4A /* myCell.swift in Sources */,
+				03AA8BF921ADAE8D00590F4A /* HabitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +478,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5BXJWJU3T3;
+				DEVELOPMENT_TEAM = 9T8MR2CYV7;
 				INFOPLIST_FILE = iOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sdu.course.ios2.vebal13.iOS-Projects";
+				PRODUCT_BUNDLE_IDENTIFIER = "sdu.course.ios2.vebal13.iOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -471,13 +499,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5BXJWJU3T3;
+				DEVELOPMENT_TEAM = 9T8MR2CYV7;
 				INFOPLIST_FILE = iOS_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sdu.course.ios2.vebal13.iOS-Projects";
+				PRODUCT_BUNDLE_IDENTIFIER = "sdu.course.ios2.vebal13.iOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
