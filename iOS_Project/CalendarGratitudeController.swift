@@ -14,17 +14,9 @@ class CalendarGratitudeController : UIViewController  {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
-    
-    
     @IBOutlet weak var gratitudeTxtfield1: UITextField!
     @IBOutlet weak var gratitudeTxtfield2: UITextField!
     @IBOutlet weak var gratitudeTxtfield3: UITextField!
-    
-    
-    
-    //    @IBOutlet weak var gratitudeTxtfield1: UITextField!
-    //    @IBOutlet weak var gratitudeTxtfield2: UITextField!
-    //    @IBOutlet weak var gratitudeTxtfield3: UITextField!
     
     var currentCell : CustomCell!
     
@@ -36,18 +28,13 @@ class CalendarGratitudeController : UIViewController  {
     let todaysDate = Date()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarView.calendarDataSource = self
         calendarView.calendarDelegate = self
-        
         setupCalendarView()
-        
         calendarView.scrollToDate(Date(), animateScroll: false)
         calendarView.selectDates([Date()])
-        
-        //        self.gratitudeTxtfield1.delegate = self
         
     }
     
@@ -61,7 +48,6 @@ class CalendarGratitudeController : UIViewController  {
             
         }
     }
-    
     
     
     @IBAction func addGratitude(_ sender: UIButton) {
@@ -82,12 +68,8 @@ class CalendarGratitudeController : UIViewController  {
             let alertController = UIAlertController(title: "Error", message: "Please fill in the three fields", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             present(alertController, animated: true, completion: nil)
-            
         }
-        
     }
-    
-    
     
     
     func setGratitude (){
@@ -95,9 +77,6 @@ class CalendarGratitudeController : UIViewController  {
         gratitudeTxtfield2.text = currentCell.gratitude2
         gratitudeTxtfield3.text = currentCell.gratitude3
     }
-    
-    
-    
     
     
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
@@ -119,7 +98,7 @@ class CalendarGratitudeController : UIViewController  {
         let monthDateString = formatter.string(from: cellState.date)
         
         if todaysDateString == monthDateString {
-            validCell.dateLabel.textColor = UIColor.blue
+            validCell.dateLabel.textColor = UIColor.white
         } else {
             validCell.dateLabel.textColor = cellState.isSelected ? UIColor.red : UIColor.black
         }
@@ -129,15 +108,8 @@ class CalendarGratitudeController : UIViewController  {
     func handleCellSelected(view: JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CustomCell else { return }
         currentCell = validCell
-        
         setGratitude()
-        /*
-         gratitudeTxtfield1.text = ""
-         gratitudeTxtfield2.text = ""
-         gratitudeTxtfield3.text = ""*/
-        
     }
-    
     
     
     func setupViewFromCalendar(from visibleDates: DateSegmentInfo){
@@ -150,15 +122,10 @@ class CalendarGratitudeController : UIViewController  {
             self.formatter.dateFormat = "MMMM"
             self.month.text = self.formatter.string(from: date)
         }
-        
-        
     }
-    
 }
 
 extension CalendarGratitudeController: JTAppleCalendarViewDataSource {
-    
-    
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -170,19 +137,12 @@ extension CalendarGratitudeController: JTAppleCalendarViewDataSource {
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
     }
-    
-    
-    
 }
-
-
-
 
 extension CalendarGratitudeController: JTAppleCalendarViewDelegate {
     //Display the cell
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        // This function should have the same code as the cellForItemAt function
         let myCustomCell = cell as! CustomCell
         sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
     }
@@ -208,25 +168,17 @@ extension CalendarGratitudeController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        //     guard let validCell = cell as? CustomCell else {return }
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
-        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        //    guard let validCell = cell as? CustomCell else {return }
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
-        
-        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        
         setupViewFromCalendar(from: visibleDates)
-        
     }
-    
 }
 

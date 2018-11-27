@@ -14,7 +14,6 @@ class CalendarMoodController : UIViewController  {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
-    //    @IBOutlet weak var badDayBtn: UIButton!
     
     
     let monthColor = UIColor.black
@@ -66,11 +65,10 @@ class CalendarMoodController : UIViewController  {
         let monthDateString = formatter.string(from: cellState.date)
         
         if todaysDateString == monthDateString {
-            validCell.dateLabel.textColor = UIColor.blue
+            validCell.dateLabel.textColor = UIColor.white
         } else {
             validCell.dateLabel.textColor = cellState.isSelected ? UIColor.black : UIColor.black
         }
-        
     }
     
     
@@ -101,12 +99,7 @@ class CalendarMoodController : UIViewController  {
                 validCell.blankDay = true
             }
         }
-        
-        
     }
-    
-    
-    
     
     func setupViewFromCalendar(from visibleDates: DateSegmentInfo){
         calendarView.visibleDates(){(visibileDates) in
@@ -118,10 +111,7 @@ class CalendarMoodController : UIViewController  {
             self.formatter.dateFormat = "MMMM"
             self.month.text = self.formatter.string(from: date)
         }
-        
-        
     }
-    
 }
 
 
@@ -141,14 +131,10 @@ extension CalendarMoodController: JTAppleCalendarViewDataSource {
     }
 }
 
-
-
-
 extension CalendarMoodController: JTAppleCalendarViewDelegate {
     //Display the cell
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        // This function should have the same code as the cellForItemAt function
         let myCustomCell = cell as! CustomCell
         sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
     }
@@ -168,8 +154,6 @@ extension CalendarMoodController: JTAppleCalendarViewDelegate {
             myCustomCell.redMarker.isHidden = true
         }
         
-        
-        
         return myCustomCell
     }
     
@@ -179,17 +163,12 @@ extension CalendarMoodController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        //     guard let validCell = cell as? CustomCell else {return }
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
-        
     }
     
-    
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        
         setupViewFromCalendar(from: visibleDates)
-        
     }
 }
 

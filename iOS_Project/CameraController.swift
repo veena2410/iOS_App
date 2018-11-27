@@ -39,7 +39,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .camera
-
+        
         imagePickerController.allowsEditing = true
         
         //presents the camera
@@ -78,13 +78,13 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
             
             //saves the picked image to the persistence layer
             coreData().saveImage(image: image)
-   
+            
         }
         
         //dismiss the camera or the library after an image has been picked
         picker.dismiss(animated: true, completion: nil)
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

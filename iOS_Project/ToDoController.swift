@@ -16,13 +16,11 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var myTableView: UITableView!
     
     let entityName = "Todos"
-    
     var todos: [String] = []
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (todos.count)
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,7 +42,7 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 todos.remove(at: indexPath.row)
                 self.viewDidLoad()
             }
-  
+            
             myTableView.reloadData()
         }
     }
@@ -80,7 +78,7 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //adds image array from the core data to the todolist
         self.addToList(array: coreData().loadToDo(entityName: self.entityName))
-
+        
     }
     
 }

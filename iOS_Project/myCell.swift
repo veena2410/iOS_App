@@ -7,12 +7,9 @@
 //
 
 import UIKit
+//Cell in collectionview for habit-tracker: myImageview for checkboxes
 
 class myCell: UICollectionViewCell {
-    
     @IBOutlet weak var myImageView: UIImageView!
-    
-    var isCheckBoxSelected = false
-    
-    
+    var isCheckBoxSelected = false    
 }

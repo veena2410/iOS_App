@@ -51,7 +51,7 @@ class coreData {
             
         }catch {
             fatalError("fail to save image!")
-        
+            
         }
         
     }
@@ -95,7 +95,7 @@ class coreData {
         return images
     }
     
-   
+    
     //The method saves todolist and bucketlist
     func SaveToDo(name: String, entityName: String) {
         
@@ -127,9 +127,9 @@ class coreData {
             
             if(results.count > 0) {
                 for result in results as [NSManagedObject] {
-                
-                    if let todo = result.value(forKey: "name") as? String {
                     
+                    if let todo = result.value(forKey: "name") as? String {
+                        
                         list.append(todo)
                     }
                 }
@@ -168,10 +168,10 @@ class coreData {
         }catch let error as NSError {
             print("could not save. \(error), \(error.userInfo)")
         }
-    
+        
     }
     
     
     
-
+    
 }

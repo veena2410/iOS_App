@@ -7,20 +7,10 @@
 //
 
 import Foundation
+//Creating an object of habit when creating a habit in the habitcontroller
 
 class Habit {
-    
     var habitTitle = ""
     var daysOfHabit = 0
-    
-    /*
-     init(let habitTitle, let daysOfHabit) {
-     habitTitle = habitTitle
-     daysOfHabit = daysOfHabit
-     
-     
-     }
-     
-     */
     
 }

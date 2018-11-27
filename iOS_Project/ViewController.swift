@@ -1,22 +1,20 @@
+////
+////  ViewController.swift
+////  iOS_Project
+////
+////  Created by Veena Balakumar on 11/10/2018.
+////  Copyright © 2018 SDU. All rights reserved.
+////
 //
-//  ViewController.swift
-//  iOS_Project
+//import UIKit
 //
-//  Created by Veena Balakumar on 11/10/2018.
-//  Copyright © 2018 SDU. All rights reserved.
+//class ViewController: UIViewController {
 //
-
-import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Test test
-    }
-
-
-}
-
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//            }
+//
+//
+//}
+//
