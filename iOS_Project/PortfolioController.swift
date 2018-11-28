@@ -7,45 +7,60 @@
 //
 
 import UIKit
+import Foundation
 
-class PortfolioController: UIViewController {
+class PortfolioController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var scrollViewImage: UIScrollView!
+    var images: [UIImage]!
     
-    var images: [UIImage] = []
+    
+
+    @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Loads the stored images from core data
+        images = coreData().loadImage()
         
-        //Loads saved images from persistence
-        let images = coreData().loadImage()
+        //reloads the data in the collectionView
+        collectionView.reloadData()
         
-        addImageToScrollView(imageArray: images)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
+    }
+    
+    
+    //Numbers of items is equal the number of images loaded from the core data
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return images.count
+    }
+    
+    
+    //sets imageView in each sell the be the corresponding image from the array of images
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! photoCell
+        
+        let photo = images[indexPath.row] 
+        
+        cell.backgroundColor = UIColor.white
+        
+        cell.imageView.image = photo
+        
+        return cell
         
     }
     
-    //The method adds the images loaded to the scrollView
-    func addImageToScrollView(imageArray: [UIImage]) {
-        
-        for i in 0..<imageArray.count {
-            
-            //Defines the size of the imageView
-            let imageView = UIImageView()
-            let y = self.view.frame.size.height * CGFloat(i)
-            imageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
-            imageView.contentMode = .scaleAspectFit
-            
-            //sets the loaded image to the imageView
-            imageView.image = imageArray[i]
-            
-            //sets the size of the scrollview
-            scrollViewImage.contentSize.height = scrollViewImage.frame.size.height * CGFloat(i+1)
-            
-            //adds the imageview to the scrollview
-            scrollViewImage.addSubview(imageView)
-        }
-    }
+
+    
+    
+    
+
+    
+    
     
     
 }

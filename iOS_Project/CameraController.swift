@@ -79,6 +79,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
             //saves the picked image to the persistence layer
             coreData().saveImage(image: image)
             
+            
         }
         
         //dismiss the camera or the library after an image has been picked
