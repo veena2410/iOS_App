@@ -18,11 +18,12 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let entityName = "Todos"
     var todos: [String] = []
     
+    //Number of rows in tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (todos.count)
         
     }
-    
+    //What to display at each cell in tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
@@ -31,6 +32,7 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    //delete task functionality
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCell.EditingStyle.delete
@@ -46,7 +48,7 @@ class ToDoController: UIViewController, UITableViewDelegate, UITableViewDataSour
             myTableView.reloadData()
         }
     }
-    
+    //Adding task to list and core data and loading to tableview:
     @IBAction func addItemButton(_ sender: Any) {
         if(input.text != "")
         {

@@ -43,7 +43,7 @@ class CheckBoxController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
-    
+    //If the checkboxes are selected the image have to change
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! myCell
@@ -61,7 +61,7 @@ class CheckBoxController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
         
-        print("Is checbox selected?", cell.isCheckBoxSelected)
+        //print("Is checbox selected?", cell.isCheckBoxSelected)
         
     }
 }

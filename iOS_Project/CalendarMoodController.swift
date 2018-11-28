@@ -46,8 +46,10 @@ class CalendarMoodController : UIViewController  {
         }
     }
     
+    //Cell date color when it is selected and not selected, and the date color when it is current date
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
         guard let validCell = view as? CustomCell else { return }
+        
         if cellState.isSelected{
             validCell.dateLabel.textColor = selectedMonthColor
         }else {
