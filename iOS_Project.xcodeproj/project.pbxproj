@@ -26,7 +26,6 @@
 		03AA8C0621ADB4AF00590F4A /* checkBoxFILLED @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AA8C0421ADB4AF00590F4A /* checkBoxFILLED @2x.png */; };
 		03AA8C0721ADB4B000590F4A /* checkBoxOUTLINE @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AA8C0521ADB4AF00590F4A /* checkBoxOUTLINE @2x.png */; };
 		03ABE650217B73A900D93B56 /* BucketListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ABE64F217B73A900D93B56 /* BucketListController.swift */; };
-		03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D4682175CC38000E91A5 /* SettingsController.swift */; };
 		03D2D46D2175CC79000E91A5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2D46C2175CC79000E91A5 /* CameraController.swift */; };
 		03E7149521819C9600F2DB21 /* ProfilePicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E7149421819C9600F2DB21 /* ProfilePicture.jpg */; };
 		03F7DF9E219D6878007568EF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03F7DF9C219D6878007568EF /* Model.xcdatamodeld */; };
@@ -59,7 +58,6 @@
 		03AA8C0421ADB4AF00590F4A /* checkBoxFILLED @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxFILLED @2x.png"; sourceTree = "<group>"; };
 		03AA8C0521ADB4AF00590F4A /* checkBoxOUTLINE @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxOUTLINE @2x.png"; sourceTree = "<group>"; };
 		03ABE64F217B73A900D93B56 /* BucketListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListController.swift; sourceTree = "<group>"; };
-		03D2D4682175CC38000E91A5 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		03D2D46C2175CC79000E91A5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		03E7149421819C9600F2DB21 /* ProfilePicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfilePicture.jpg; sourceTree = "<group>"; };
 		03F7DF9D219D6878007568EF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				03A69E6C219A5A7A0045DF6A /* CustomCell.swift */,
 				6C376A3721A5E53C009D111A /* coreData.swift */,
 				6C7B4A0621AC5B7E00FBC916 /* PortfolioController.swift */,
-				03D2D4682175CC38000E91A5 /* SettingsController.swift */,
 				03FC4D93216F3437001D009F /* Assets.xcassets */,
 				03FC4D95216F3437001D009F /* LaunchScreen.storyboard */,
 				03FC4D98216F3437001D009F /* Info.plist */,
@@ -307,7 +304,6 @@
 				6C7B4A0721AC5B7E00FBC916 /* PortfolioController.swift in Sources */,
 				03A69E6F219A5A990045DF6A /* CalendarMoodController.swift in Sources */,
 				034D19B3219AE7BC0073AE09 /* CalendarGratitudeController.swift in Sources */,
-				03D2D4692175CC38000E91A5 /* SettingsController.swift in Sources */,
 				6C376A3821A5E53C009D111A /* coreData.swift in Sources */,
 				03D2D46D2175CC79000E91A5 /* CameraController.swift in Sources */,
 				03FC4D8D216F3436001D009F /* AppDelegate.swift in Sources */,
