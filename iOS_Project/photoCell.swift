@@ -17,8 +17,5 @@ class photoCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func configure(model: ImageModel) {
-        
-        imageView.image = model.image
-    }
+
 }
